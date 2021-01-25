@@ -1,2 +1,5 @@
+![Banner](img/cloudgym.png?raw=true)
+=====
+
 # cloudgym
-A cloudgym better experience
+A Flask app for a better cloudgym experience.
