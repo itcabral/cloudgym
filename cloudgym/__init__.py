@@ -10,6 +10,8 @@ def root():
         birthday = request.form.get("birthday")
         if email and birthday:
             content = req.get_aulas(email, birthday)
+            if not content:
+                return render_template("index.html")
         else:
             return render_template("index.html")                 
         return render_template("form_classes.html", content=content, email=email, birthday=birthday)           
