@@ -27,13 +27,11 @@ def form_classes():
             return render_template("cloudgym_response.html", response=response)
         else:
             return render_template("index.html")
-    else:
-        return render_template("index.html")    
+    return render_template("index.html")    
 
 def parse_http_client_post(email, birthday, date, aulas):
     if not aulas or not email or not birthday or not date:                
         return
-
     cloudgym_response_register_class = list()
     if aulas:
         for i in range(len(aulas)):                       
