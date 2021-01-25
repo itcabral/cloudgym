@@ -13,11 +13,9 @@ def register_class(email, birthday, date, id):
 def get_aulas(email, birthday):    
     url = URL_GET_AULAS + str(email) + '/' + str(birthday)
     req = requests.get(url=url, headers=HTTP_HEADERS)
-    content = json.loads(req.content.decode('utf8').replace("'", '"'))
-    return content
+    return json.loads(req.content.decode('utf8').replace("'", '"'))
 
 def response_code_translator(response):
-    print(response)
     for (i, value) in enumerate(response):
         if b'-15' in value:
             response[i] = "Já Registrado!"
