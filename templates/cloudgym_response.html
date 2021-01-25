@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOUDGYM</title>
+    <link href="{{ url_for('static', filename='favicon.png') }}" type="image/png" sizes="12x12" rel="icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="{{ url_for('static', filename='style/style_cloudgym_response.css') }}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<h1 class="center">CLOUDGYM</h1>
+<hr />
+<div>
+    <table class="center">
+        <thead class="">
+            <tr>
+                <th>
+                    Status
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in response %}
+            <tr class="">
+                <td class="two-columns">
+                    <div>
+                        {{ i }}
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="center">
+    <button class="btn-home" onclick="window.location.href='/';">Home</button>
+</div>
+</body>
+
+</html>

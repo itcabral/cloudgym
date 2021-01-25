@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOUDGYM</title>
+    <link href="{{ url_for('static', filename='favicon.png') }}" type="image/png" sizes="12x12" rel="icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://pioul.fr/ext/jquery-diyslider/jquery.diyslider.min.js"></script>
+    <link href="{{ url_for('static', filename='style/style.css') }}" rel="stylesheet" />
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="center">
+        <h1>Aulas</h1>
+        <hr />
+    </div>
+    <div>
+        <div class="slider-container center">
+            <div class="btn-slider">
+                <button id="go-left">&laquo;</button> <button id="go-right">&raquo;</button>
+            </div>
+            <div class="slider">
+                <div>
+                    <div class="calendario janeiro">
+                        <h2>Janeiro</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="calendario-semana domingo">Dom</td>
+                                    <td class="calendario-semana">Seg</td>
+                                    <td class="calendario-semana">Ter</td>
+                                    <td class="calendario-semana">Qua</td>
+                                    <td class="calendario-semana">Qui</td>
+                                    <td class="calendario-semana">Sex</td>
+                                    <td class="calendario-semana">Sab</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia"></td>
+                                    <td class="calendario-dia"></td>
+                                    <td class="calendario-dia"></td>
+                                    <td class="calendario-dia"></td>
+                                    <td class="calendario-dia"></td>
+                                    <td class="calendario-dia sexta">01</td>
+                                    <td class="calendario-dia sabado">02</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">03</td>
+                                    <td class="calendario-dia segunda">04</td>
+                                    <td class="calendario-dia terça">05</td>
+                                    <td class="calendario-dia quarta">06</td>
+                                    <td class="calendario-dia quinta">07</td>
+                                    <td class="calendario-dia sexta">08</td>
+                                    <td class="calendario-dia sabado">09</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">10</td>
+                                    <td class="calendario-dia segunda">11</td>
+                                    <td class="calendario-dia terça">12</td>
+                                    <td class="calendario-dia quarta">13</td>
+                                    <td class="calendario-dia quinta">14</td>
+                                    <td class="calendario-dia sexta">15</td>
+                                    <td class="calendario-dia sabado">16</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">17</td>
+                                    <td class="calendario-dia segunda">18</td>
+                                    <td class="calendario-dia terça">19</td>
+                                    <td class="calendario-dia quarta">20</td>
+                                    <td class="calendario-dia quinta">21</td>
+                                    <td class="calendario-dia sexta">22</td>
+                                    <td class="calendario-dia sabado">23</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">24</td>
+                                    <td class="calendario-dia segunda">25</td>
+                                    <td class="calendario-dia terça">26</td>
+                                    <td class="calendario-dia quarta">27</td>
+                                    <td class="calendario-dia quinta">28</td>
+                                    <td class="calendario-dia sexta">29</td>
+                                    <td class="calendario-dia sabado">30</td>
+                                </tr>
+                                <tr>
+                                    <td td class="calendario-dia domingo">31</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calendario fevereiro">
+                        <h2>Fevereiro</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="calendario-semana domingo">Dom</td>
+                                    <td class="calendario-semana">Seg</td>
+                                    <td class="calendario-semana">Ter</td>
+                                    <td class="calendario-semana">Qua</td>
+                                    <td class="calendario-semana">Qui</td>
+                                    <td class="calendario-semana">Sex</td>
+                                    <td class="calendario-semana">Sab</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo"></td>
+                                    <td class="calendario-dia segunda">01</td>
+                                    <td class="calendario-dia terça">02</td>
+                                    <td class="calendario-dia quarta">03</td>
+                                    <td class="calendario-dia quinta">04</td>
+                                    <td class="calendario-dia sexta">05</td>
+                                    <td class="calendario-dia sabado">06</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">07</td>
+                                    <td class="calendario-dia segunda">08</td>
+                                    <td class="calendario-dia terça">09</td>
+                                    <td class="calendario-dia quarta">10</td>
+                                    <td class="calendario-dia quinta">11</td>
+                                    <td class="calendario-dia sexta">12</td>
+                                    <td class="calendario-dia sabado">13</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">14</td>
+                                    <td class="calendario-dia segunda">15</td>
+                                    <td class="calendario-dia terça">16</td>
+                                    <td class="calendario-dia quarta">17</td>
+                                    <td class="calendario-dia quinta">18</td>
+                                    <td class="calendario-dia sexta">19</td>
+                                    <td class="calendario-dia sabado">20</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">21</td>
+                                    <td class="calendario-dia segunda">22</td>
+                                    <td class="calendario-dia terça">23</td>
+                                    <td class="calendario-dia quarta">24</td>
+                                    <td class="calendario-dia quinta">25</td>
+                                    <td class="calendario-dia sexta">26</td>
+                                    <td class="calendario-dia sabado">27</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">28</td>
+                                    <td class="calendario-dia segunda"></td>
+                                    <td class="calendario-dia terça"></td>
+                                    <td class="calendario-dia quarta"></td>
+                                    <td class="calendario-dia quinta"></td>
+                                    <td class="calendario-dia sexta"></td>
+                                    <td class="calendario-dia sabado"></td>
+                                </tr>
+                                <tr>
+                                    <td td class="calendario-dia domingo"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="calendario março">
+                        <h2>Março</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="calendario-semana domingo">Dom</td>
+                                    <td class="calendario-semana">Seg</td>
+                                    <td class="calendario-semana">Ter</td>
+                                    <td class="calendario-semana">Qua</td>
+                                    <td class="calendario-semana">Qui</td>
+                                    <td class="calendario-semana">Sex</td>
+                                    <td class="calendario-semana">Sab</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo"></td>
+                                    <td class="calendario-dia segunda">01</td>
+                                    <td class="calendario-dia terça">02</td>
+                                    <td class="calendario-dia quarta">03</td>
+                                    <td class="calendario-dia quinta">04</td>
+                                    <td class="calendario-dia sexta">05</td>
+                                    <td class="calendario-dia sabado">06</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">07</td>
+                                    <td class="calendario-dia segunda">08</td>
+                                    <td class="calendario-dia terça">09</td>
+                                    <td class="calendario-dia quarta">10</td>
+                                    <td class="calendario-dia quinta">11</td>
+                                    <td class="calendario-dia sexta">12</td>
+                                    <td class="calendario-dia sabado">13</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">14</td>
+                                    <td class="calendario-dia segunda">15</td>
+                                    <td class="calendario-dia terça">16</td>
+                                    <td class="calendario-dia quarta">17</td>
+                                    <td class="calendario-dia quinta">18</td>
+                                    <td class="calendario-dia sexta">19</td>
+                                    <td class="calendario-dia sabado">20</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">21</td>
+                                    <td class="calendario-dia segunda">22</td>
+                                    <td class="calendario-dia terça">23</td>
+                                    <td class="calendario-dia quarta">24</td>
+                                    <td class="calendario-dia quinta">25</td>
+                                    <td class="calendario-dia sexta">26</td>
+                                    <td class="calendario-dia sabado">27</td>
+                                </tr>
+                                <tr>
+                                    <td class="calendario-dia domingo">28</td>
+                                    <td class="calendario-dia segunda">29</td>
+                                    <td class="calendario-dia terça">30</td>
+                                    <td class="calendario-dia quarta">31</td>
+                                    <td class="calendario-dia quinta"></td>
+                                    <td class="calendario-dia sexta"></td>
+                                    <td class="calendario-dia sabado"></td>
+                                </tr>
+                                <tr>
+                                    <td td class="calendario-dia domingo"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <p id="dica-guia">Selecione um dia no calendário!</p>
+        </div>
+        <form class="gym_form" action="{{ url_for("form_classes")}}" method="post">
+            <table>
+                <thead class="dp-none">
+                    <tr>
+                        <th>
+                            Aulas
+                        </th>
+                        <th>
+                            Horário
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in content %}
+                    <tr class="weekday-{{ i.dayOfWeek }} dp-none">
+                        <td class="two-columns">
+                            <div>
+                                <labe><input type="checkbox" class="checkbox" name="checkbox" value="{{ i.id }}">
+                                    {{ i.name }}</label>
+                            </div>
+                        </td>
+                        <td class="two-columns">
+                            <table>
+                                <tr>
+                                    <td class="td-50p">
+                                        <div>
+                                            <p>{{ i.time }}</p>
+                                        </div>
+                                    </td>
+                                    <td class="td-50p">
+                                        <div>
+                                            <p>{{ i.endTime }}</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <input type="hidden" name="email" value="{{ email }}">
+            <input type="hidden" name="birthday" value="{{ birthday }}">
+            <input type="hidden" name="date" value="" id="date">
+
+            <div class="center">
+                <button class="btn-submit" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>    
+    <script src="{{ url_for('static', filename='script/calendario.js') }}"></script>
+</body>
+</html>
