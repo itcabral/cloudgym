@@ -4,7 +4,7 @@
 CloudGym
 =====
 
-A Flask app for a better cloudgym experience.
+A Flask app for a better CloudGym® experience.
 
 How to Run
 =====
