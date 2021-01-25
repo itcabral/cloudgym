@@ -9,12 +9,12 @@ A Flask app for a better cloudgym experience.
 How to Run
 =====
 
-#git clone
-#cd cloudgym
-#python run.py
+#git clone<br/>
+#cd cloudgym<br/>
+#python run.py<br/>
 
-Flask built-in webserver will start at default tcp port 5000.
-Access the page and enter your email and birth date registered at your gym.
+Flask built-in webserver will start at default tcp port 5000.<br/>
+Access the page and enter your email and birth date registered at your gym.<br/>
 <code>Apply for any class at any time.</code>
 
 ToDo
