@@ -13,7 +13,8 @@ def register_class(email, birthday, date, id):
 def get_aulas(email, birthday):    
     url = URL_GET_AULAS + str(email) + '/' + str(birthday)
     req = requests.get(url=url, headers=HTTP_HEADERS)
-    return json.loads(req.content.decode('utf8').replace("'", '"'))
+    if req.status_code == 200:
+        return json.loads(req.content.decode('utf8').replace("'", '"'))
 
 def response_code_translator(response):
     for (i, value) in enumerate(response):
