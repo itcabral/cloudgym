@@ -10,11 +10,8 @@ def root():
         birthday = request.form.get("birthday")
         if email and birthday:
             content = req.get_aulas(email, birthday)
-            if not content:
-                return render_template("index.html")
-        else:
-            return render_template("index.html")                 
-        return render_template("form_classes.html", content=content, email=email, birthday=birthday)           
+            if content:
+                return render_template("form_classes.html", content=content, email=email, birthday=birthday)                   
     return render_template("index.html")
 
 @app.route('/form_classes.html', methods =["GET", "POST"])
@@ -24,23 +21,19 @@ def form_classes():
         birthday = request.form.get("birthday")
         date = request.form.get("date")
         aulas = request.form.getlist("checkbox")
-        if aulas:
+        if aulas and email and birthday and date:
             response = parse_http_client_post(email, birthday, date, aulas)
-            return render_template("cloudgym_response.html", response=response)
-        else:
-            return render_template("index.html")
+            if response:
+                return render_template("cloudgym_response.html", response=response)
     return render_template("index.html")    
 
 def parse_http_client_post(email, birthday, date, aulas):
-    if not aulas or not email or not birthday or not date:                
-        return
     cloudgym_response_register_class = list()
-    if aulas:
-        for i in range(len(aulas)):                       
-            r = req.register_class(email, birthday, date, aulas[i])
-            cloudgym_response_register_class.append(r)            
-        cloudgym_response_register_class = req.response_code_translator(cloudgym_response_register_class)            
-        return cloudgym_response_register_class
+    for i in range(len(aulas)):                       
+        r = req.register_class(email, birthday, date, aulas[i])
+        cloudgym_response_register_class.append(r)            
+    cloudgym_response_register_class = req.response_code_translator(cloudgym_response_register_class)            
+    return cloudgym_response_register_class
             
 @app.after_request
 def add_header(r):
